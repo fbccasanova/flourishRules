@@ -9,41 +9,41 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background-color: #05472A; /* Matching your physical board green */
+  background-color: #05472A; 
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 15px 40px 15px; /* Removed top padding entirely */
+  padding: 15px 15px 40px 15px; /* Added top padding for the new top element */
   color: #ffffff;
 }
 
-/* Logo Styling - UPDATED: Maximized Size and pulled up */
+/* Logo Styling */
 img.logo {
   max-width: 420px;
   width: 95%;
   height: auto;
-  margin-top: -10px; /* Pulls logo closer to the top edge */
-  margin-bottom: -15px; /* Pulls "Game Rules" closer */
+  margin-top: 10px; 
+  margin-bottom: -15px; 
   display: block;
 }
 
-/* Header Styling - UPDATED: Tightened Margins */
+/* Header Styling */
 h1 {
   font-size: 1.8rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #C1FF72; /* Electric Lime */
+  color: #C1FF72; 
   text-align: center;
-  margin-bottom: 10px; /* Pulled card closer */
+  margin-bottom: 10px; 
   text-shadow: 2px 2px 0px #03301c;
 }
 
 /* Main Instruction Card */
 .card {
-  background-color: #1a2a6c; /* Navy Blue */
+  background-color: #1a2a6c; 
   border: 4px solid #C1FF72;
   border-radius: 24px;
   box-shadow: 8px 8px 0px #C1FF72;
@@ -127,7 +127,6 @@ h1 {
   flex-shrink: 0;
 }
 
-/* Visual of the tracker highlight */
 .tracker-box {
   width: 24px;
   height: 24px;
@@ -142,13 +141,13 @@ h1 {
   line-height: 1.4;
 }
 
-/* Glowing Visibility Tip Instruction */
+/* Glowing Visibility Tip Instruction - MOVED TO TOP STYLING */
 .drag-tip {
-  margin-top: 20px;
+  margin-bottom: 20px; /* Changed from margin-top to bottom */
   background: #1a2a6c; 
   border: 2px solid #C1FF72; 
   border-radius: 20px;
-  padding: 20px;
+  padding: 15px 20px;
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -160,19 +159,19 @@ h1 {
 }
 
 .drag-handle-visual {
-  width: 90px;
-  height: 10px;
+  width: 80px;
+  height: 8px;
   background: #ffffff;
   border-radius: 10px;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.9), 
               0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 .drag-tip p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .tip-header {
@@ -190,6 +189,13 @@ h1 {
 </head>
 <body>
 
+<div class="drag-tip">
+  <div class="drag-handle-visual"></div>
+  <p>
+    <span class="tip-header">VISIBILITY TIP:</span> Use the <span class="tip-highlight">White Handle Bar</span> (pictured above) to drag this screen up or down to see the board clearly!
+  </p>
+</div>
+
 <img class="logo" 
      src="https://raw.githubusercontent.com/calebkatz874-bot/images/main/FLOURISH.png" 
      alt="Flourish Logo">
@@ -198,7 +204,6 @@ h1 {
 
 <div class="card">
 
-  <!-- How to Start -->
   <div class="section">
     <div class="section-label">Initial Setup</div>
     <div class="rule">
@@ -215,7 +220,6 @@ h1 {
     </div>
   </div>
 
-  <!-- Board Tracking -->
   <div class="section">
     <div class="section-label">Board Tracking</div>
     <div class="legend">
@@ -226,16 +230,15 @@ h1 {
     </div>
   </div>
 
-  <!-- Special Spaces -->
   <div class="section">
     <div class="section-label">Special Spaces</div>
     <div class="legend">
       <div class="legend-item">
-        <div class="legend-icon">🍔🍟</div>
+        <div class="legend-icon">🍟🍔</div>
         <p>Landing on <span class="pink">NEGATIVE SPACES</span> moves you <span class="pink">BACKWARDS.</span></p>
       </div>
       <div class="legend-item">
-        <div class="legend-icon">🍇🥦</div>
+        <div class="legend-icon">🥬🍇</div>
         <p>Landing on <span class="green">POSITIVE SPACES</span> moves you <span class="green">FORWARD.</span></p>
       </div>
       <div class="legend-item">
@@ -243,20 +246,12 @@ h1 {
         <p><span class="bold">PORTALS</span> automatically teleport you across the board.</p>
       </div>
       <div class="legend-item">
-        <div class="legend-icon">❓</div>
+        <div class="legend-icon">🧠</div>
         <p><span class="bold">CHALLENGE SPOTS</span> open a Quiz. Answer correctly for a <span class="green">BONUS MOVE!</span></p>
       </div>
     </div>
   </div>
 
-</div>
-
-<!-- Visibility Tip Instruction -->
-<div class="drag-tip">
-  <div class="drag-handle-visual"></div>
-  <p>
-    <span class="tip-header">VISIBILITY TIP:</span> Use the <span class="tip-highlight">White Handle Bar</span> (pictured above) to drag the dice screen higher or lower. This helps you see the board more clearly!
-  </p>
 </div>
 
 </body>

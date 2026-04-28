@@ -15,17 +15,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px 15px 40px 15px; /* Added top padding for the new top element */
+  padding: 15px 15px 40px 15px; 
   color: #ffffff;
 }
 
-/* Logo Styling */
 img.logo {
-  max-width: 420px;
-  width: 95%;
+  max-width: 380px; /* Reduced from 550px for smaller size on phone */
+  width: 100%;      /* Set to 100% to take full advantage of max-width */
   height: auto;
-  margin-top: 10px; 
-  margin-bottom: -15px; 
+  margin-top: 5px; 
+  margin-bottom: -35px; /* Even tighter margin to reduce space */
   display: block;
 }
 
@@ -37,7 +36,7 @@ h1 {
   letter-spacing: 2px;
   color: #C1FF72; 
   text-align: center;
-  margin-bottom: 10px; 
+  margin-bottom: 0px; 
   text-shadow: 2px 2px 0px #03301c;
 }
 
@@ -141,9 +140,9 @@ h1 {
   line-height: 1.4;
 }
 
-/* Glowing Visibility Tip Instruction - MOVED TO TOP STYLING */
+/* Glowing Visibility Tip Instruction */
 .drag-tip {
-  margin-bottom: 20px; /* Changed from margin-top to bottom */
+  margin-bottom: 20px; 
   background: #1a2a6c; 
   border: 2px solid #C1FF72; 
   border-radius: 20px;
@@ -189,16 +188,16 @@ h1 {
 </head>
 <body>
 
+<img class="logo" 
+     src="Flourish Board Gane (12 x 12 in) (164 x 164 px) (1000 x 1000 px).svg" 
+     alt="Flourish Rules Logo">
+
 <div class="drag-tip">
   <div class="drag-handle-visual"></div>
   <p>
     <span class="tip-header">VISIBILITY TIP:</span> Use the <span class="tip-highlight">White Handle Bar</span> (pictured above) to drag this screen up or down to see the board clearly!
   </p>
 </div>
-
-<img class="logo" 
-     src="https://raw.githubusercontent.com/calebkatz874-bot/images/main/FLOURISH.png" 
-     alt="Flourish Logo">
 
 <h1>Game Rules</h1>
 
